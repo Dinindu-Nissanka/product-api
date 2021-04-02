@@ -1,0 +1,16 @@
+{
+  "name": "Product API - Production",
+  "port": 3000,
+  "db": {
+    "username": "root",
+    "password": "root",
+    "database": "production",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "logger": {
+    "level": "http",
+    "outputFilePrefix": "api.production"
+  }
+}

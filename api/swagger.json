@@ -1,0 +1,166 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Product API",
+    "description": "Product API",
+    "license": { "name": "MIT", "url": "https://opensource.org/licenses/MIT" }
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1",
+  "tags": [
+    { "name": "Products", "description": "API for products in the system" }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/products": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "Get all products in system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Products" }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Products"],
+        "summary": "Create a product in system",
+        "parameters": [
+          {
+            "name": "product",
+            "in": "body",
+            "description": "Product that we want to create",
+            "schema": { "$ref": "#/definitions/CreateProduct" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Product" }
+          }
+        }
+      }
+    },
+    "/products/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of the product",
+          "type": "string",
+          "format": "uuid"
+        }
+      ],
+      "get": {
+        "tags": ["Products"],
+        "summary": "Get a product in system wth givn Id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Product" }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update product",
+        "tags": ["Products"],
+        "parameters": [
+          {
+            "name": "product",
+            "in": "body",
+            "description": "Product with new values of properties",
+            "schema": { "$ref": "#/definitions/UpdateProduct" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product is updated",
+            "schema": { "$ref": "#/definitions/Product" }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete product with given ID",
+        "tags": ["Products"],
+        "responses": {
+          "200": {
+            "description": "Product is deleted",
+            "schema": { "$ref": "#/definitions/Product" }
+          }
+        }
+      }
+    },
+    "/products/upload": {
+      "post": {
+        "tags": ["Products"],
+        "summary": "Create products in system by uploading a csv file",
+        "description": "This endpoint expects a valid csv file with required format to create bulk products in the system. Please make sure the csv file contains below strings as the column names. `name` `sku` `slug` `brandId`.\n",
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "csv",
+            "type": "file",
+            "description": "The file to upload."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/Products" }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Product": {
+      "required": ["id", "name", "slug", "sku", "brand"],
+      "properties": {
+        "id": { "type": "string", "uniqueItems": true, "format": "uuid" },
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "sku": { "type": "string" },
+        "brand": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "uniqueItems": true,
+              "format": "uuid"
+            },
+            "name": { "type": "string" }
+          }
+        },
+        "createdAt": { "type": "string", "format": "date" },
+        "updatedAt": { "type": "string", "format": "date" }
+      }
+    },
+    "Products": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Product" }
+    },
+    "CreateProduct": {
+      "required": ["name", "slug", "sku", "brandId"],
+      "properties": {
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "sku": { "type": "string" },
+        "brandId": { "type": "string", "format": "uuid" }
+      }
+    },
+    "UpdateProduct": {
+      "properties": {
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "sku": { "type": "string" },
+        "brandId": { "type": "string", "format": "uuid" }
+      }
+    }
+  }
+}

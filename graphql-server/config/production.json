@@ -1,0 +1,13 @@
+{
+  "name": "Product API GraphQl- Prod",
+  "port": 4000,
+  "api": {
+    "host": "localhost",
+    "port": 3000,
+    "baseUrl": "/api/v1"
+  },
+  "logger": {
+    "level": "info",
+    "outputFilePrefix": "graphql.production"
+  }
+}
