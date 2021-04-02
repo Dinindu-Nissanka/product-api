@@ -7,9 +7,11 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createProduct(product: ProductCreateRequest!): Product!
-    updateProduct(id: String!, product: ProductUpdateRequest!): Product!
-    deleteProduct(id: String!): Product
+    createProduct(product: ProductCreateRequest!): ProductCreateResponse!
+    updateProduct(
+      id: String!
+      product: ProductUpdateRequest!
+    ): ProductUpdateResponse!
   }
 
   type Brand {
@@ -34,6 +36,19 @@ const typeDefs = gql`
     slug: String
     sku: String
     brandId: String
+  }
+
+  type ProductCreateResponse {
+    name: String!
+    slug: String!
+    sku: String!
+    id: String!
+  }
+  type ProductUpdateResponse {
+    name: String
+    slug: String
+    sku: String
+    id: String
   }
 `;
 export default typeDefs;
