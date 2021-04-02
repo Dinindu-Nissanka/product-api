@@ -12,10 +12,10 @@ Graphql endpoint for Product API
 
 ```bash
 npm install
-npm run dev
+npm run server
 ```
 
-###### 1.4 You can access graphql playgorund from [localhost:4000](http://localhost:4000/graphql)
+###### 1.4 You can access graphql playgorund from [localhost:4000/api/v2/product](http://localhost:4000/api/v2/product)
 
 #### 2. Test
 

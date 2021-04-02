@@ -12,7 +12,7 @@ API for product
 
 ```bash
 npm install
-npm run dev
+npm run api
 ```
 
 ###### 1.3 You can access docs from [localhost:3000/api-docs](http://localhost:3000/api-docs)
