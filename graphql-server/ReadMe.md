@@ -2,6 +2,19 @@
 
 Graphql endpoint for Product API
 
+Technologies and Tool
+
+- express
+- typescript
+- graphql
+- apollo-server
+- winston
+- jest
+- eslint
+- prettier
+- docker
+- docker-compose
+
 #### 1. How to run
 
 ###### 1.1 Make sure you have already installed [Node](https://www.nodejs.org).

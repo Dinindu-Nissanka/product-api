@@ -2,6 +2,19 @@
 
 API for product
 
+Technologies and Tool
+
+- express
+- typescript
+- sequelize
+- winston
+- morgan
+- jest
+- supertest
+- eslint
+- prettier
+- swagger
+
 #### 1. How to run
 
 ###### 1.1 Make sure you have already installed [Node](https://www.nodejs.org).
