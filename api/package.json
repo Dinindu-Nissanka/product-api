@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "Product API assignment",
   "main": "src/start.ts",
-  "type": "module",
   "scripts": {
     "dev": "NODE_ENV=development nodemon src/start.ts",
     "build": "tsc --project ./",
     "clean": "rm -rf dist",
     "api": "npm run clean && npm run build && node -r source-map-support/register dist/src/start.js",
-    "api:build-docker": "docker build .",
-    "api:docker": "node -r source-map-support/register dist/src/start.js",
     "lint": "eslint --ext .js,.jsx,.ts .",
     "lint-fix": "eslint --fix --ext .js,.jsx,.ts .",
     "test": "cross-env NODE_ENV=test jest --verbose "
