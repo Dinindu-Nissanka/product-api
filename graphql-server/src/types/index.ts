@@ -23,7 +23,6 @@ export interface ProductUpdate {
 
 export interface ProductView extends ProductBase {
   id: string;
-  brand: Brand;
 }
 
 export interface Datasource {
