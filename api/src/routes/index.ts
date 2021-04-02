@@ -1,5 +1,6 @@
 import { Express, Request, Response } from 'express';
 import * as ProductRoutes from './product.route';
+import * as BrandRoutes from './brand.route';
 
 const baseUrl = '/api/v1';
 
@@ -11,4 +12,5 @@ export const initRoutes = (app: Express): void => {
   );
 
   ProductRoutes.routes(app, baseUrl);
+  BrandRoutes.routes(app, baseUrl);
 };

@@ -1,2 +1,3 @@
 import * as ProductController from './product.controller';
-export { ProductController };
+import * as BrandController from './brand.controller';
+export { ProductController, BrandController };

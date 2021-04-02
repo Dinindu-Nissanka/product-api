@@ -1,3 +1,4 @@
+import { Brand } from '../types/brand.type';
 import { ProductCreateView, ProductView } from '../types/product.type';
 
 export const transformToProductView = (result: any): ProductView => {
@@ -10,6 +11,13 @@ export const transformToProductView = (result: any): ProductView => {
       id: result.brand.id,
       name: result.brand.name,
     },
+  };
+};
+
+export const transformToBrandView = (result: any): Brand => {
+  return {
+    id: result.id,
+    name: result.name,
   };
 };
 
