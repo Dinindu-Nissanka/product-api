@@ -15,7 +15,7 @@ npm install
 npm run server
 ```
 
-###### 1.4 You can access graphql playgorund from [localhost:4000/api/v2/product](http://localhost:4000/api/v2/product)
+###### 1.4 You can access graphql playground from [localhost:4000/api/v2/product](http://localhost:4000/api/v2/product)
 
 #### 2. Test
 
@@ -32,3 +32,13 @@ npm run test
 ```bash
 npm run lint
 ```
+
+#### 4. Docker instance
+
+###### 4.1 Execute following command to up a docker container of graphql server
+
+```bash
+npm run docker-build
+```
+
+You can access graphql playground from [localhost:4000/api/v2/product](http://localhost:4000/api/v2/product)

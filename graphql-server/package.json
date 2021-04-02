@@ -9,9 +9,11 @@
     "clean": "rm -rf dist",
     "prod": "node dist/src/index.js",
     "server": "npm run clean && npm run build && npm run prod",
+    "server:docker": "node dist/src/index.js",
     "lint": "eslint --ext .js,.jsx,.ts .",
     "lint-fix": "eslint --fix --ext .js,.jsx,.ts .",
-    "test": "jest"
+    "test": "jest",
+    "docker-build": "docker-compose build && docker-compose up --force-recreate"
   },
   "author": "Dinindu Nissanka",
   "license": "ISC",

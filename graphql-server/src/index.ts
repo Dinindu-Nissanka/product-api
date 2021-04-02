@@ -21,7 +21,7 @@ const server = new ApolloServer({
 
 server.applyMiddleware({
   app,
-  path: '/api/v2/product',
+  path: '/api/v2/products',
 });
 
 app.listen(port, () => {
