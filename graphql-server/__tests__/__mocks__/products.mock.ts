@@ -4,14 +4,9 @@ export const getAllProductsAPIResponse = [
     name: 'Bag',
     slug: 'bag',
     sku: '2f8442a0-916c-32eb-babe-2701447bb9d3',
-    createdAt: '2021-03-30T15:26:07.000Z',
-    updatedAt: '2021-03-30T15:26:07.000Z',
-    brandId: '123e4567-e89b-12d3-a456-556642440000',
     brand: {
       id: '123e4567-e89b-12d3-a456-556642440000',
       name: 'Adidas',
-      createdAt: '2021-03-30T15:59:10.000Z',
-      updatedAt: '2021-03-30T15:59:10.000Z',
     },
   },
   {
@@ -19,14 +14,9 @@ export const getAllProductsAPIResponse = [
     name: 'Shoe',
     slug: 'shoe',
     sku: '7f8432a0-916c-32eb-babe-2701447bb9d3',
-    createdAt: '2021-03-30T15:26:07.000Z',
-    updatedAt: '2021-03-31T12:47:39.000Z',
-    brandId: '123e4567-e89b-12d3-a456-556642440000',
     brand: {
       id: '123e4567-e89b-12d3-a456-556642440000',
       name: 'Adidas',
-      createdAt: '2021-03-30T15:59:10.000Z',
-      updatedAt: '2021-03-30T15:59:10.000Z',
     },
   },
   {
@@ -34,14 +24,9 @@ export const getAllProductsAPIResponse = [
     name: 'Shirt',
     slug: 'shirt',
     sku: '6f2432a0-916c-32eb-babe-2701447bb9d3',
-    createdAt: '2021-03-31T12:34:08.000Z',
-    updatedAt: '2021-03-31T12:34:08.000Z',
-    brandId: '123e4567-e89b-12d3-a456-556642440000',
     brand: {
       id: '123e4567-e89b-12d3-a456-556642440000',
       name: 'Adidas',
-      createdAt: '2021-03-30T15:59:10.000Z',
-      updatedAt: '2021-03-30T15:59:10.000Z',
     },
   },
   {
@@ -49,14 +34,9 @@ export const getAllProductsAPIResponse = [
     name: 'Short',
     slug: 'short',
     sku: '5e8432a0-916c-32eb-babe-2701447bb9d3',
-    createdAt: '2021-03-30T10:34:21.000Z',
-    updatedAt: '2021-03-30T10:59:57.000Z',
-    brandId: '123e4567-e89b-12d3-a456-556642440000',
     brand: {
       id: '123e4567-e89b-12d3-a456-556642440000',
       name: 'Adidas',
-      createdAt: '2021-03-30T15:59:10.000Z',
-      updatedAt: '2021-03-30T15:59:10.000Z',
     },
   },
 ];
@@ -100,14 +80,9 @@ export const getProductAPIResponse = {
   name: 'Test name',
   slug: 'test-name',
   sku: '3f8442a0-746c-52eb-babe-4201447bb9d3',
-  createdAt: '2021-03-30T15:26:07.000Z',
-  updatedAt: '2021-03-30T15:26:07.000Z',
-  brandId: '123e4567-e89b-12d3-a456-556642440000',
   brand: {
     id: '123e4567-e89b-12d3-a456-556642440000',
     name: 'Adidas',
-    createdAt: '2021-03-30T15:59:10.000Z',
-    updatedAt: '2021-03-30T15:59:10.000Z',
   },
 };
 
@@ -127,15 +102,6 @@ export const createProductAPIResponse = {
   name: 'Bag',
   slug: 'bag',
   sku: '3f8442a0-746c-52eb-babe-4201447bb9d3',
-  createdAt: '2021-03-30T15:26:07.000Z',
-  updatedAt: '2021-03-30T15:26:07.000Z',
-  brandId: '123e4567-e89b-12d3-a456-556642440000',
-  brand: {
-    id: '123e4567-e89b-12d3-a456-556642440000',
-    name: 'Adidas',
-    createdAt: '2021-03-30T15:59:10.000Z',
-    updatedAt: '2021-03-30T15:59:10.000Z',
-  },
 };
 
 export const createProductGraphqlResponse = {
@@ -143,10 +109,6 @@ export const createProductGraphqlResponse = {
   name: 'Bag',
   slug: 'bag',
   sku: '3f8442a0-746c-52eb-babe-4201447bb9d3',
-  brand: {
-    id: '123e4567-e89b-12d3-a456-556642440000',
-    name: 'Adidas',
-  },
 };
 
 export const updateProductAPIResponse = {
@@ -154,15 +116,6 @@ export const updateProductAPIResponse = {
   name: 'Bag',
   slug: 'bag',
   sku: '3f8442a0-746c-52eb-babe-4201447bb9d3',
-  createdAt: '2021-03-30T15:26:07.000Z',
-  updatedAt: '2021-03-30T15:26:07.000Z',
-  brandId: '123e4567-e89b-12d3-a456-556642440000',
-  brand: {
-    id: '123e4567-e89b-12d3-a456-556642440000',
-    name: 'Adidas',
-    createdAt: '2021-03-30T15:59:10.000Z',
-    updatedAt: '2021-03-30T15:59:10.000Z',
-  },
 };
 
 export const updateProductGraphqlResponse = {
@@ -170,8 +123,4 @@ export const updateProductGraphqlResponse = {
   name: 'Bag',
   slug: 'bag',
   sku: '3f8442a0-746c-52eb-babe-4201447bb9d3',
-  brand: {
-    id: '123e4567-e89b-12d3-a456-556642440000',
-    name: 'Adidas',
-  },
 };

@@ -90,10 +90,6 @@ describe('ProductAPI', () => {
           name
           slug
           sku
-          brand {
-            id
-            name
-          }
         }
       }
     `;
@@ -121,10 +117,6 @@ describe('ProductAPI', () => {
           name
           slug
           sku
-          brand {
-            id
-            name
-          }
         }
       }
     `;
